@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <div class="nos-produits">
+        <span>Nos Produits</span>
+    </div>
+    <section class="section-search">
+        <div class="search-box">
+            <div class="search-field">
+                <input type="text" class="input" placeholder="Recherche">
+                <img width="30px" src="image/search-icon.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="genre-product">
+        <div>
+            <a class="a-homme" href="#"><span>Homme</span></a>
+            <a class="a-mixte" href="#"><span>Mixte</span></a>
+            <a class="a-femme" href="#"><span>Femme</span></a>
+        </div>
+    </section>
+
+    <section class="section-shop">
+        <div class="box-categorie">
+            <div class="categories">
+                <h3>CATÉGORIE</h3>
+                <div>
+                  <h4>Homme</h4>
+                  <ul>
+                    <li>T-shirts et chemises</li>
+                    <li>Pantalons et jeans</li>
+                    <li>Vestes et manteaux</li>
+                    <li>Pulls et sweats à capuche</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4>Femme</h4>
+                  <ul>
+                    <li>Robes</li>
+                    <li>Tops et chemisiers</li>
+                    <li>Jupes et shorts</li>
+                    <li>Pantalons et jeans</li>
+                    <li>Vestes et manteaux</li>
+                    <li>Pulls et cardigans</li>
+                  </ul>
+                </div>
+              </div>
+            <hr>
+            <div class="div-couleur">
+                <h3>COULEUR</h3>
+                <ul class="list-couleur">
+                    <li class="active"><div></div></li>
+                    <li><div></div></li>
+                    <li><div></div></li>
+                    <li><div></div></li>
+                </ul>
+            </div>
+
+            <hr>
+            <div class="div-price">
+                <h3>PRIX</h3>
+                <div class="price-input">
+                    <div class="field">
+                        <span>Min</span>
+                        <input type="number" class="input-min" value="2500">
+                    </div>
+                    <div class="separator">-</div>
+                    <div class="field">
+                        <span>Max</span>
+                        <input type="number" class="input-max" value="7500">
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                    <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                    <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                </div>
+
+            </div>
+            <hr>
+            <ul>
+                <h3>TAILLE</h3>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+                <li>XXL</li>
+            </ul>
+
+
+
+        </div>
+        <div class="container-product">
+            <div class="box-trie">
+                <label >Trie par:</label>
+
+                <select class="filtre-select">
+                    <option>Default</option>
+                    <option>Prix</option>
+                    <option>Date</option>
+                </select>
+            </div>
+            <div class="box-product">
+
+                {% for product in products %}
+                    <div class="div-product">
+                        <img class="img-product" src="" alt="">
+                        <img class="img-addFavoris" width="30px" src="{% static 'icons/favoris-icon3.png' %}" alt="">
+                        <div class="product-info">
+                            <h3>{{product.name}}</h3>
+                            <span>Black, Nice</span>
+                            <p>{{product.price}} DZD</p>
+                        </div>
+                        <div class="div-product-info">
+                            <a class="a-product-info" href="{{ product.get_absolute_url }}">Plus info</a>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+{% endblock %}

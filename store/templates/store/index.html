@@ -1,8 +1,149 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
 
-<h1> wwwwwwwwwwwwwwww </h1>
+
+
+    <section class="section-slide">
+        <div class="">
+            <div>
+                <div class="div-titre"><h1 id="change" >Plongez dans un océan de couleurs !</h1></div>
+                <p class="text-slide">Explorez notre large gamme de vêtements aux couleurs éclatantes. Exprimez-vous avec style et originalité !</p>
+                <a href="#" class="a-boutique">Allez a la boutique </a>
+            </div>
+            <img id="img-slide" src="image/Logo.PNG" alt="">
+        </div>
+        <ul class="controls">
+            <li><a class="a-prev" onclick="prevSlide();" href="#"><img width="40px" src="{% static 'icons/next-icon.png' %}" alt=""></a></li>
+            <li><a class="a-next" onclick="nextSlide();" href="#"><img width="40px" src="{% static 'icons/next-icon.png' %}" alt=""></a></li>
+        </ul>
+
+        <ul class="pagination">
+            <li class="dot active"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+        </ul>
+    </section>
+
+    <section class="section-pp">
+        <h2>Produits populaires</h2>
+        <p>Découvrez les indispensables de la mode, les produits les plus populaires pour un style tendance !</p>
+        <div>
+            <div class="div-product">
+                <img class="img-product" src="" alt="">
+                <img class="img-addFavoris" width="30px" src="{% static 'icons/favoris-icon3.png' %}" alt="">
+                <div class="product-info">
+                       <h3>T-shirt</h3>
+                       <span>Black, Nice</span>
+                       <p>2000.00 DZD</p>
+                </div>
+                <div class="div-product-info">
+                    <a class="a-product-info" href="">Plus info</a>
+                </div>
+            </div>
+            <div class="div-product">
+                <img class="img-product" src="" alt="">
+                <img class="img-addFavoris" width="30px" src="image/favoris-icon3.png" alt="">
+                <div class="product-info">
+                       <h3>T-shirt</h3>
+                       <span>Black, Nice</span>
+                       <p>2000.00 DZD</p>
+                </div>
+                <div class="div-product-info">
+                    <a class="a-product-info" href="">Plus info</a>
+                </div>
+            </div>
+            <div class="div-product">
+                <img class="img-product" src="" alt="">
+                <img class="img-addFavoris" width="30px" src="image/favoris-icon3.png" alt="">
+                <div class="product-info">
+                       <h3>T-shirt</h3>
+                       <span>Black, Nice</span>
+                       <p>2000.00 DZD</p>
+                </div>
+                <div class="div-product-info">
+                    <a class="a-product-info" href="">Plus info</a>
+                </div>
+            </div>
+            <div class="div-product">
+                <img class="img-product" src="" alt="">
+                <img class="img-addFavoris" width="30px" src="image/favoris-icon3.png" alt="">
+                <div class="product-info">
+                       <h3>T-shirt</h3>
+                       <span>Black, Nice</span>
+                       <p>2000.00 DZD</p>
+                </div>
+                <div class="div-product-info">
+                    <a class="a-product-info" href="">Plus info</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-new-collection">
+        <h2>Nouvelle collection</h2>
+
+
+    </section>
+    <section class="section-promo">
+        <h2>Nos promotion</h2>
+        <p>Offres incroyables à ne pas manquer, profitez de nos promotions exceptionnelles !</p>
+        <div>
+            <div class="div-product">
+                <img class="img-product" src="" alt="">
+                <img class="img-addFavoris" width="30px" src="image/favoris-icon3.png" alt="">
+                <div class="product-info">
+                       <h3>T-shirt</h3>
+                       <span>Black, Nice</span>
+                       <p>2000.00 DZD</p>
+                </div>
+                <div class="div-product-info">
+                    <a class="a-product-info" href="">Plus info</a>
+                </div>
+            </div>
+            <div class="div-product">
+                <img class="img-product" src="" alt="">
+                <img class="img-addFavoris" width="30px" src="image/favoris-icon3.png" alt="">
+                <div class="product-info">
+                       <h3>T-shirt</h3>
+                       <span>Black, Nice</span>
+                       <p>2000.00 DZD</p>
+                </div>
+                <div class="div-product-info">
+                    <a class="a-product-info" href="">Plus info</a>
+                </div>
+            </div>
+            <div class="div-product">
+                <img class="img-product" src="" alt="">
+                <img class="img-addFavoris" width="30px" src="image/favoris-icon3.png" alt="">
+                <div class="product-info">
+                       <h3>T-shirt</h3>
+                       <span>Black, Nice</span>
+                       <p>2000.00 DZD</p>
+                </div>
+                <div class="div-product-info">
+                    <a class="a-product-info" href="">Plus info</a>
+                </div>
+            </div>
+            <div class="div-product">
+                <img class="img-product" src="" alt="">
+                <img class="img-addFavoris" width="30px" src="image/favoris-icon3.png" alt="">
+                <div class="product-info">
+                       <h3>T-shirt</h3>
+                       <span>Black, Nice</span>
+                       <p>2000.00 DZD</p>
+                </div>
+                <div class="div-product-info">
+                    <a class="a-product-info" href="">Plus info</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-lien">
+
+    </section>
+
+
 
 {% endblock %}

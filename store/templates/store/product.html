@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="product-section">
+    <div class="product-image">
+        <div class="slide-wrapper">
+            <div class="inner-wrapper">
+                <img class="slide" src="image/jeune-femme-dans-parc-automne.jpg" alt=""><img class="slide"
+                    src="image/etudiant-afro-americain-marchant-dans-parc.jpg" alt=""><img class="slide"
+                    src="image/chemise-pour-homme-podshoe.jpg" alt=""><img class="slide"
+                    src="image/femme-telephone.jpg" alt="">
+            </div>
+            <ul class="controls">
+                <li><a class="a-prev" href="#"><img width="40px" src="{% static 'icons/next-icon.png' %}" } alt=""></a></li>
+                <li><a class="a-next" href="#"><img width="40px" src="{% static 'icons/next-icon.png' %}" alt=""></a></li>
+            </ul>
+        </div>
+
+        <div class="inner-wrapper-small">
+            <img class="slide2" src="image/jeune-femme-dans-parc-automne.jpg" alt=""><img class="slide2"
+                src="image/etudiant-afro-americain-marchant-dans-parc.jpg" alt=""><img class="slide2"
+                src="image/jeune-femme-dans-parc-automne.jpg" alt=""><img class="slide2"
+                src="image/jeune-femme-dans-parc-automne.jpg" alt="">
+
+        </div>
+    </div>
+    <div class="product-details">
+        <h1>{{product.name}}</h1>
+        <span>{{product.price}} DZD</span>
+
+        <p>{{product.description}}</p>
+
+        <div>
+            <h3>couleur</h3>
+            <ul class="list-couleur">
+                <li class="active"><div></div></li>
+                <li><div></div></li>
+                <li><div></div></li>
+
+            </ul>
+        </div>
+        <div>
+            <h3>type</h3>
+            <span>Halal</span>
+        </div>
+        <div>
+            <h3>taille</h3>
+            <ul class="list-taille">
+                <li class="active">S</li>
+                <li>M</li>
+                <li>L</li>
+                <li>XL</li>
+                <li>XXL</li>
+            </ul>
+        </div>
+        <div>
+            <h3>quantité</h3>
+            <input class="numberstyle" type="number" min="1" step="1" value="1">
+        </div>
+
+        <div class="div-a">
+            <a class="ajoute-favoris" href="#">Ajouter au panier</a>
+            <a class="ajoute-panier" href="#">Ajouter au favoris</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

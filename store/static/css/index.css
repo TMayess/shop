@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Alatsi', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: relative;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 2;
+
+}
+a{
+    text-decoration: none;
+}
+h1{
+    margin: 0;
+}
+.logo{
+    width: 100px;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+
+}
+.nav-header .active{
+    background-color: #F6F6F6;
+    border-bottom: 3px solid #000;
+}
+.nav-header ul{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-header ul li{
+    display: inline-block;
+
+}
+.nav-header a{
+    padding: 35px 20px;
+    color: black;
+    font-weight: 500;
+    display: inline-block;
+    z-index: 0;
+    transition: background-color .5s ease-out;
+
+
+
+}
+.nav-header a:hover{
+    background-color: #F6F6F6;
+}
+
+.div-header{
+    display: flex;
+    align-items: center;
+}
+.div-header a img{
+    margin: 0 5px;
+    opacity: .2;
+    transition: opacity .5s ease-out;
+
+}
+.div-header a img:hover{
+    opacity: 1;
+
+}
+.a-connexion{
+    padding: 13px 20px;
+    border-radius: 10px;
+    background-color: black;
+    margin-left: 50px;
+    color: white;
+    transition: background-color .3s ease-out;
+}
+.a-connexion:hover{
+    background-color: #D9D9D9;
+}
+
+.section-slide{
+    height: 88vh;
+    padding-left: 70px;
+    position: relative;
+    width: 100%;
+    background-color: #FFCC00;
+    transition: background-color 1s;
+    z-index: 1;
+
+}
+.section-slide > div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-slide div h1{
+    font-size: 2.5rem;
+}
+
+.div-titre{
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+.section-slide div p{
+    font-size: 1rem;
+    display: block;
+    width: 400px;
+    height: 250px;
+}
+
+
+.a-boutique{
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background-color: black;
+}
+
+
+.controls a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    padding-left: 5px;
+}
+.controls a:hover{
+    background-color: #d8d8d8;
+    opacity: 0.3;
+}
+
+.a-prev{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    rotate: 180deg;
+}
+
+.a-next{
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+@keyframes swipe-out {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+}
+
+@keyframes swipe-in {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+}
+
+@keyframes swipe-out-reverse {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+@keyframes swipe-in-reverse {
+    0% {
+    transform: translateY(100%);
+    }
+    100% {
+    transform: translateY(0%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
+
+.swipe-out {
+    animation: swipe-out 0.4s ease-in-out forwards;
+}
+
+.swipe-in {
+    animation: swipe-in 0.4s ease-in-out forwards;
+}
+
+.swipe-out-reverse {
+    animation: swipe-out-reverse 0.4s ease-in-out forwards;
+}
+
+.swipe-in-reverse {
+    animation: swipe-in-reverse 0.4s ease-in-out forwards;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.fade-out {
+    animation-name: fadeOut;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(234, 234, 234);
+    margin: 0 10px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.pagination{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.dot.active {
+    background-color: black;
+}
+
+.section-pp, .section-promo{
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 50px;
+}
+.section-pp > div, .section-promo > div{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.div-product{
+    position: relative;
+    width: 300px;
+    height: 370px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    transition: box-shadow 0.5s;
+}
+.div-product:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.div-product .img-product{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75%;
+    background-color: #d8d8d8;
+}
+.div-product .img-addFavoris{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px 0;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.5s;
+    z-index: 2;
+}
+.div-product .img-addFavoris:hover{
+    background-color: #cbcbcb;
+}
+
+.div-product {
+    position: relative;
+}
+
+.product-info {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    height: 25%;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    transition: all 0.8s ease-in-out .2s;
+}
+
+.div-product:hover .product-info {
+    height: 100%;
+    padding-top: 100px;
+}
+
+.a-product-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: #ffffff;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out 0.2s, background-color 0.5s;
+}
+
+.div-product:hover .a-product-info {
+    height: 50px;
+}
+.a-product-info:hover{
+    background-color: #cbcbcb;
+}
+
+
+.product-info h3{
+    margin: 0;
+    font-size: 1,1em;
+}
+.product-info span{
+    color: #cbcbcb;
+
+}
+.product-info p{
+    margin: 10px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    text-decoration: 200;
+
+}
+.section-new-collection{
+    height: 90vh;
+    width: 100%;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+
+.section-lien{
+    width: 500px;
+}
+
+footer{
+    height: 350px;
+    background-color: #f5f5f5;
+    display: flex;
+    padding-bottom: 20px;
+
+}
+footer > div{
+    width: 25%;
+}
+
+.first-part-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #000;
+    flex-basis: 30%;
+}
+.first-part-footer .logo-footer{
+    margin-bottom: 15px;
+}
+
+
+.first-part-footer span{
+    display: block;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 30px;
+    color: #c3c3c3;
+    font-family:  "Segoe UI", sans-serif;
+}
+.first-part-footer .reseaux-footer img{
+    padding: 5px;
+    border-radius: 20px;
+    margin: 5px;
+    border: 2px solid #8c8c8c;
+
+}
+.first-part-footer .reseaux-footer img:hover{
+    background-color: #8c8c8c;
+}
+
+.part-footer{
+    display: flex;
+    align-items: center;
+    color: #c3c3c3;
+    justify-content: center;
+}
+.part-footer h5{
+    font-size: 1.1rem;
+    margin: 15px 0;
+    color: #000;
+}
+.part-footer a{
+    color: #c3c3c3;
+}
+.part-footer li{
+    padding: 5px 0;
+}
+.part-footer a:hover{
+    color: rgb(70, 70, 70);
+}

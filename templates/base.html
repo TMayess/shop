@@ -1,14 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{current_url_name}}</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/boutique.css' %}">
+    <link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
 </head>
 <body>
+
+{% include 'header.html' %}
 
 {% block content %}
 
 {% endblock %}
+
+{% include 'footer.html' %}
+
+<script src="{% static 'script/index.js' %}"></script>
+<script src="{% static 'script/product_detail.js' %}"></script>
 
 </body>
 </html>

@@ -1,0 +1,14 @@
+{% load static %}
+<header>
+        <img  class="logo" src="{% static 'icons/Logo.PNG' %}" alt="">
+        <nav class="nav-header">
+            <ul>
+                <li><a class="{% if current_url_name == 'index' %}active{% endif %}" href="{% url 'index' %}">Accueil</a></li><li><a class="{% if current_url_name == 'boutique' %}active{% endif %}" href="{% url 'boutique' %}">Boutique</a></li><li><a href="">A propos</a></li><li><a href="">Contactez-nous</a></li>
+            </ul>
+        </nav>
+        <div class="div-header">
+            <a href=""><img width="30px" src="{% static 'icons/favoris-incone3.png' %}" title="Favoris" alt=""></a>
+            <a href=""><img width="30px" src="{% static 'icons/panier-icone.png' %}" title="Panier" alt=""></a>
+            <a class="a-connexion" href="#">Connexion</a>
+        </div>
+    </header>
