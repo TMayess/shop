@@ -65,7 +65,7 @@ ul{
     display: flex;
     align-items: center;
 }
-.div-header a img{
+.div-header img{
     margin: 0 5px;
     opacity: .2;
     transition: opacity .5s ease-out;
@@ -85,6 +85,25 @@ ul{
 }
 .a-connexion:hover{
     background-color: #D9D9D9;
+}
+
+.settings-user{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding: 5px 10px;
+    margin-left: 20px;
+    background-color: #F6F6F6;
+    text-transform: capitalize;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+.settings-user:hover{
+    background-color:#D9D9D9;
+}
+.settings-user span{
+    margin: 10px 10px;
 }
 
 .section-slide{
@@ -441,3 +460,5 @@ footer > div{
 .part-footer a:hover{
     color: rgb(70, 70, 70);
 }
+
+

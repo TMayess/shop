@@ -9,6 +9,15 @@
         <div class="div-header">
             <a href=""><img width="30px" src="{% static 'icons/favoris-incone3.png' %}" title="Favoris" alt=""></a>
             <a href=""><img width="30px" src="{% static 'icons/panier-icone.png' %}" title="Panier" alt=""></a>
-            <a class="a-connexion" href="#">Connexion</a>
+            {% if user.is_authenticated %}
+            <div class="settings-user">
+                <img width="30px" src="{% static 'icons/user-icon.png' %}">
+                <span>{{ user.username }}</span>
+            </div>
+         
+            <!--<a href="{% url 'logout' %}">Deconnexion</a>-->
+            {% else %}
+            <a class="a-connexion" href="{% url 'login' %}">Connexion</a>
+            {% endif %}
         </div>
     </header>

@@ -1,0 +1,50 @@
+
+{% extends 'accountManagerBase.html' %}
+
+
+{% block content %}
+<div class="main-container">
+    <!-- <img src="Logo-removebg-preview.png" width="200px" alt=""> -->
+
+    <div class="sub-container">
+
+        <h1>Se connecter</h1>
+        <form class="sign-form" action="" method="POST">
+        {% csrf_token %}
+            <div class="field">
+                <input type="username" placeholder="Email" name="username" id="username" required>
+                <span class="error">
+                    <img class="error-icon" src="error-icon-red.png" alt="">
+                    <p class="error-text"> bla blaffffffffffffff ffff bla</p>
+                </span>
+            </div>
+            <div class="field">
+                <input type="password" name="password" placeholder="Mot de passe" id="password" required>
+                <span class="error">
+                    <img class="error-icon" src="error-icon-red.png" alt="">
+                    <p class="error-text"> bla blaffffffffffffff ffff bla</p>
+                </span>
+            </div>
+
+
+            <label class="remember">
+                <input id="remember_me" type="checkbox" name="remember">
+                <span>Se souvenir de moi</span>
+            </label>
+            <div class="btn_login">
+                <button type="submit">Connexion</button>
+            </div>
+
+
+
+        </form>
+         <div class="a-login">
+            <a href="">Mot de passe oublié ?</a>
+            <br>
+            <a href="{% url 'signup' %}" >Si vous n'avez pas encore de compte, créez-en un.</a>
+          </div>
+    </div>
+
+</div>
+
+{% endblock %}
