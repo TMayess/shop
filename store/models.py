@@ -19,8 +19,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=128)
     price = models.FloatField(default=0.0)
     description = models.TextField(blank=True)
-    size = models.CharField(max_length=32)
-    color = models.CharField(max_length=32)
+    thumbnail = models.ImageField(upload_to="products", blank=True, null=True)
     material = models.CharField(max_length=128)
 
     def __str__(self):
@@ -30,10 +29,34 @@ class Product(models.Model):
         return reverse("product", kwargs={"slug": self.slug})
 
 
+
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='product_images/')
-    is_main = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.product)
+
+
+class Color(models.Model):
+    colorHexadecimal = models.CharField(max_length=7)
+
+    def __str__(self):
+        return self.colorHexadecimal
+
+
+class Size(models.Model):
+    name = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.name
+
+
+class Stock(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    color = models.ForeignKey(Color, on_delete=models.CASCADE)
+    size = models.ForeignKey(Size, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.product} - {self.color} - {self.size}"

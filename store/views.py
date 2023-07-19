@@ -15,7 +15,7 @@ def index(request):
 
 def boutique(request):
     current_url_name = resolve(request.path).url_name
-    products = Product.objects.all()
+    products = Product.objects.prefetch_related('productimage_set').all()
     context = {
         'current_url_name': current_url_name,
         'products': products

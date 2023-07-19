@@ -177,6 +177,7 @@ input{
 }
 .container-product{
   width: calc(100% - 400px);
+  height: 2000px;
   display: inline-block;
 }
 .box-product{

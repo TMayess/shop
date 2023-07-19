@@ -117,3 +117,8 @@ rangeInput.forEach((input) => {
     });
 });
 
+
+let subMenu = document.getElementById("droplist");
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }

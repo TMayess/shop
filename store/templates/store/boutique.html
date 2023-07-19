@@ -110,7 +110,7 @@
 
                 {% for product in products %}
                     <div class="div-product">
-                        <img class="img-product" src="" alt="">
+                        <img class="img-product" src="{{ product.thumbnail.url }}" alt="">
                         <img class="img-addFavoris" width="30px" src="{% static 'icons/favoris-icon3.png' %}" alt="">
                         <div class="product-info">
                             <h3>{{product.name}}</h3>
