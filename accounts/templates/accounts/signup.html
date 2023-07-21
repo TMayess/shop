@@ -6,143 +6,50 @@
     <!-- <h1>S'inscrire</h1> -->
 
     <!-- <img src="Logo-removebg-preview.png" width="200px" alt=""> -->
-    <form class="sub-container">
+    <div class="sub-container">
 
-      <form  class="container" action="" method="POST">
-        {% csrf_token %}
+      <div class="container">
 
-        <div class="sign-form" >
+        <form class="sign-form"  action="" method="POST" >
+          {% csrf_token %}
           <h2>Informations personnelles</h2>
           <p>Prière de fournir les détails suivants pour compléter votre inscription :</p>
-
-          <div>
-            <label for="lastname">Nom</label>
-            <input type="text" placeholder="Votre nom" name="lastname" id="lastname" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
-
-          <div>
-            <label for="firstname">Prénom</label>
-            <input type="text" placeholder="Votre prénom" name="firstname" id="firstname" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
-
-          <div>
-            <label for="birthdate">Date de naissance</label>
-            <input type="date" name="birthdate" id="birthdate" required>
-          </div>
-              <h2>Contact</h2>
-          <div class="field">
-            <label for="telephone">Numéro de téléphone</label>
-            <input type="tel" placeholder="Ex: 123-456-7890" name="phone" id="telephone" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
+          {{ form.as_p }}
 
           <div class="gap"></div>
-
           <div class="btn-form">
-            <button type="submit" onclick="scrollRight()">Suivant</button>
+            <button type="submit" onclick="scrollLeftPerso()">Suivant</button>
           </div>
-        </div>
 
-        <div class="sign-form" >
+        </form>
 
-
-
+        <!--<form class="sign-form" >
 
           <h2>Adresse</h2>
-          <div class="field">
-            <label for="pays">Pays</label>
-            <input type="text" placeholder="Ex: France" name="pays" id="pays" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
 
-          <div class="field">
-            <label for="ville">Ville</label>
-            <input type="text" placeholder="Ex: Paris" name="ville" id="ville" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="adresse">Adresse</label>
-            <input type="text" placeholder="Ex: 123 Rue Principale" name="adresse" id="adresse" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="codepostal">Code postal</label>
-            <input type="text" placeholder="Ex: 75001" name="codepostal" id="codepostal" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
-
+          {{ stepTwoForm.as_p}}
 
           <div class="btn-form">
             <button type="button" onclick="scrollRight()">Suivant</button>
             <button type="button" onclick="scrollLeftPerso()">Précédent</button>
-
           </div>
-        </div>
+        </form>
 
-        <div class="sign-form" >
+        <form class="sign-form" >
 
           <h2>Sécurité</h2>
-          <p>Veuillez remplir le formulaire d'inscription :</p>
+          <p>Veuillez remplir le formulaire pour finaliser votre inscription :</p>
 
-          <div class="field">
-            <label for="email">Adresse e-mail</label>
-            <input type="email" placeholder="exemple@mail.com" name="email" id="email" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
+          {{ stepThreeForm.as_p}}
 
-          <div class="field">
-            <label for="password">Mot de passe</label>
-            <input type="password" placeholder="********" name="password" id="password" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="confirm-password">Confirmer le mot de passe</label>
-            <input type="password" placeholder="********" name="confirm-password" id="confirm-password" required>
-            <div class="error">
-              <img class="error-icon" src="error-icon-red.png" alt="">
-              <p class="error-text"></p>
-            </div>
-          </div>
 
           <div class="btn-form">
             <button type="submit">Valider</button>
             <button type="button" onclick="scrollLeftPerso()">Précédent</button>
-
           </div>
-        </div>
-      </form>
+
+        </form>-->
+      </div>
     </div>
   </div>
 

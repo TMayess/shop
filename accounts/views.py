@@ -1,22 +1,29 @@
 from django.contrib.auth import get_user_model, authenticate, login, logout
 from django.shortcuts import render, redirect
 
+from accounts.forms import StepOneForm, StepTwoForm, StepThreeForm
+
 User = get_user_model()
 
 
 def signup_user(request):
-    if request.method == "POST":
-        username = request.POST.get("username")
-        password = request.POST.get("password")
+    if request.method == 'POST':
+        form = StepOneForm(request.POST)
+        if form.is_valid():
+            request.session['lastname'] = form.cleaned_data['lastname']
+            request.session['firstname'] = form.cleaned_data['firstname']
+            request.session['birthdate'] = form.cleaned_data['birthdate']
 
-        return redirect('index')
+            return redirect('signup_steptwo')
 
-    return render(request, 'accounts/signup.html')
+    context = {
+        'form': StepOneForm(),
+    }
+    return render(request, 'accounts/signup.html', context)
 
 
 def login_user(request):
     if request.method == "POST":
-
         username = request.POST.get("username")
         password = request.POST.get("password")
         user = authenticate(username=username, password=password)

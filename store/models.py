@@ -14,6 +14,21 @@ Product
 - matiere
 """
 
+
+class Category(models.Model):
+    GENDER_CHOICES = (
+        ('M', 'Masculin'),
+        ('F', 'Féminin'),
+        ('U', 'Unisexe'),
+    )
+
+    name = models.CharField(max_length=30)
+    sexe = models.CharField(max_length=1, choices=GENDER_CHOICES, default='U')
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
     name = models.CharField(max_length=128)
     slug = models.SlugField(max_length=128)
@@ -21,13 +36,13 @@ class Product(models.Model):
     description = models.TextField(blank=True)
     thumbnail = models.ImageField(upload_to="products", blank=True, null=True)
     material = models.CharField(max_length=128)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
         return reverse("product", kwargs={"slug": self.slug})
-
 
 
 class ProductImage(models.Model):
