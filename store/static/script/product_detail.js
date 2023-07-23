@@ -1,4 +1,4 @@
- $(function () {
+    $(function () {
 
         var inWrap = $('.inner-wrapper');
         var slides2 = $('.slide2');
@@ -39,7 +39,6 @@
             slides2.eq(i).css('opacity', '1');
         }
         updateOpacity(i);
-
 
 
     })

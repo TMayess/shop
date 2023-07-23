@@ -61,7 +61,15 @@ class Color(models.Model):
 
 
 class Size(models.Model):
-    name = models.CharField(max_length=32)
+    SIZE_CHOICES = (
+        ('m', 'Medium'),
+        ('s', 'Small'),
+        ('x', 'Extra Small'),
+        ('xl', 'Extra Large'),
+        ('xxl', 'Extra Extra Large'),
+    )
+
+    name = models.CharField(max_length=3, choices=SIZE_CHOICES, unique=True)
 
     def __str__(self):
         return self.name

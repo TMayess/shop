@@ -12,7 +12,7 @@
         <form class="sign-form" action="" method="POST">
         {% csrf_token %}
             <div class="field">
-                <input type="username" placeholder="Email" name="username" id="username" required>
+                <input type="email" placeholder="Email" name="email" id="email" required>
                 <span class="error">
                     <img class="error-icon" src="error-icon-red.png" alt="">
                     <p class="error-text"> bla blaffffffffffffff ffff bla</p>
@@ -41,7 +41,7 @@
          <div class="a-login">
             <a href="">Mot de passe oublié ?</a>
             <br>
-            <a href="{% url 'signup' %}" >Si vous n'avez pas encore de compte, créez-en un.</a>
+            <a href="{% url 'signup_step_one' %}" >Si vous n'avez pas encore de compte, créez-en un.</a>
           </div>
     </div>
 

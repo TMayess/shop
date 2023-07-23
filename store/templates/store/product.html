@@ -6,23 +6,19 @@
     <div class="product-image">
         <div class="slide-wrapper">
             <div class="inner-wrapper">
-                <img class="slide" src="{{ product.thumbnail.url }}" alt=""><img class="slide"
-                    src="image/etudiant-afro-americain-marchant-dans-parc.jpg" alt=""><img class="slide"
-                    src="image/chemise-pour-homme-podshoe.jpg" alt=""><img class="slide"
-                    src="image/femme-telephone.jpg" alt="">
+                <img class="slide" src="{{ product.thumbnail.url }}" alt="">{% for image in product.productimage_set.all %}<img class="slide" src="{{ image.image.url }}" alt="{{ product.name }}">{% endfor %}
             </div>
             <ul class="controls">
-                <li><a class="a-prev" href="#"><img width="40px" src="{% static 'icons/next-icon.png' %}" } alt=""></a></li>
+                <li><a class="a-prev" href="#"><img width="40px" src="{% static 'icons/next-icon.png' %}" alt=""></a></li>
                 <li><a class="a-next" href="#"><img width="40px" src="{% static 'icons/next-icon.png' %}" alt=""></a></li>
             </ul>
         </div>
 
         <div class="inner-wrapper-small">
-            <img class="slide2" src="{{ product.thumbnail.url }}" alt=""><img class="slide2"
-                src="image/etudiant-afro-americain-marchant-dans-parc.jpg" alt=""><img class="slide2"
-                src="image/jeune-femme-dans-parc-automne.jpg" alt=""><img class="slide2"
-                src="image/jeune-femme-dans-parc-automne.jpg" alt="">
-
+            <img class="slide2" src="{{ product.thumbnail.url }}" alt="{{ product.name }}">
+            {% for image in product.productimage_set.all %}
+            <img class="slide2" src="{{ image.image.url }}" alt="{{ product.name }} Image">
+            {% endfor %}
         </div>
     </div>
     <div class="product-details">

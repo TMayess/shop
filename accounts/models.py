@@ -14,7 +14,6 @@ class Adresse(models.Model):
 
 
 
-
 class CustomUser(AbstractUser):
     phone = models.CharField(max_length=20, blank=True)
     birthdate = models.DateField(null=True, blank=True)
