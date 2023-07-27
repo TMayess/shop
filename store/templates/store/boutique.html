@@ -9,19 +9,19 @@
     </div>
     <section class="section-search">
         <div class="search-box">
-            <div class="search-field">
-                <input type="text" class="input" placeholder="Recherche">
-                <img width="30px" src="{% static 'icons/search-icon.png' %}" alt="">
-            </div>
+            <form methond="GET" class="search-field">
+                <input name="recherche" type="text" class="input" placeholder="Recherche">
+                <a type="submit"><img width="30px" src="{% static 'icons/search-icon.png' %}" alt=""></a>
+            </form>
         </div>
     </section>
-    <section class="genre-product">
+    <!--<section class="genre-product">
         <div>
             <a class="a-homme" href="#"><span>Homme</span></a>
             <a class="a-mixte" href="#"><span>Mixte</span></a>
             <a class="a-femme" href="#"><span>Femme</span></a>
         </div>
-    </section>
+    </section>-->
 
     <section class="section-shop">
         <div class="box-categorie">
@@ -30,22 +30,22 @@
                 <div>
                   <h4>Homme</h4>
                   <ul>
-                    <li>T-shirts et chemises</li>
-                    <li>Pantalons et jeans</li>
-                    <li>Vestes et manteaux</li>
-                    <li>Pulls et sweats à capuche</li>
+                      {% for category in categorys %}
+                        {% if category.sexe == 'M' %}
+                      <li><a href="?category={{ category.name }}">{{ category.name }}</a></li>
+                        {% endif %}
+                      {% endfor %}
                   </ul>
                 </div>
-
                 <div>
                   <h4>Femme</h4>
                   <ul>
-                    <li>Robes</li>
-                    <li>Tops et chemisiers</li>
-                    <li>Jupes et shorts</li>
-                    <li>Pantalons et jeans</li>
-                    <li>Vestes et manteaux</li>
-                    <li>Pulls et cardigans</li>
+                    {% for category in categorys %}
+                        {% if category.sexe == 'F' %}
+                        <li><a href="?category={{ category.name }}">{{ category.name }}</a></li>
+                        {% endif %}
+                      {% endfor %}
+
                   </ul>
                 </div>
               </div>
@@ -53,10 +53,10 @@
             <div class="div-couleur">
                 <h3>COULEUR</h3>
                 <ul class="list-couleur">
-                    <li class="active"><div></div></li>
-                    <li><div></div></li>
-                    <li><div></div></li>
-                    <li><div></div></li>
+                    {% for color in colors %}
+                       <li><div style="background-color: {{ color.colorHexadecimal }}"></div></li>
+                    {% endfor %}
+
                 </ul>
             </div>
 
@@ -98,20 +98,34 @@
         </div>
         <div class="container-product">
             <div class="box-trie">
-                <label >Trie par:</label>
+                <div>
+                    <label >Trie par:</label>
 
                 <select class="filtre-select">
                     <option>Default</option>
-                    <option>Prix</option>
-                    <option>Date</option>
+                    <option>Prix +</option>
+                    <option>Prix -</option>
+                    <option>Date d'ajout +</option>
+                    <option>Date d'ajout -</option>
+
                 </select>
+                </div>
+                <div>
+                  <input type="checkbox" id="product-disponible" name="disponible">
+                  <label for="product-disponible">Disponible</label>
+                </div>
             </div>
             <div class="box-product">
 
                 {% for product in products %}
                     <div class="div-product">
                         <img class="img-product" src="{{ product.thumbnail.url }}" alt="">
-                        <img class="img-addFavoris" width="30px" src="{% static 'icons/favoris-icon3.png' %}" alt="">
+                        <img class="img-addFavoris" width="30px" src="{% static 'icons/favoris-icon3.png' %}" alt="Ajouter au favoris">
+
+                        {% if product.quantity == 0 %}
+                        <img class="img-outofstock" width="35px" src="{% static 'icons/outofstock-icon.png' %}" alt="Repture de stock" title="Repture de stock">
+                        {% endif %}
+
                         <div class="product-info">
                             <h3>{{product.name}}</h3>
                             <span>Black, Nice</span>
@@ -125,6 +139,24 @@
                 {% endfor %}
 
 
+            </div>
+
+            <div class="pagination">
+                <span class="step-links">
+                    {% if products.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ products.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ products.number }} of {{ products.paginator.num_pages }}.
+                    </span>
+
+                    {% if products.has_next %}
+                        <a href="?page={{ products.next_page_number }}">next</a>
+                        <a href="?page={{ products.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
             </div>
         </div>
 

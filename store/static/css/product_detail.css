@@ -70,10 +70,12 @@
     border: 1.5px solid black;
     border-radius: 20px;
     cursor: pointer;
+    margin: 5px ;
 }
 .list-taille li:hover:not(.active){
     background-color: #fff;
 }
+
 .list-taille .active{
     background-color: #000;
     color: #fff;
@@ -82,7 +84,7 @@
 .list-couleur{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 .list-couleur li{
     display: flex;
@@ -93,6 +95,7 @@
     height: 40px;
     border-radius: 40px;
     cursor: pointer;
+    border: 1px solid #000
 
 
 }
@@ -147,3 +150,4 @@
     width: calc(100% / 4 - 15px);
     gap: 10px;
 }
+

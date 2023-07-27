@@ -37,6 +37,7 @@ class Product(models.Model):
     thumbnail = models.ImageField(upload_to="products", blank=True, null=True)
     material = models.CharField(max_length=128)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -60,7 +61,9 @@ class Color(models.Model):
         return self.colorHexadecimal
 
 
-class Size(models.Model):
+
+
+class Stock(models.Model):
     SIZE_CHOICES = (
         ('m', 'Medium'),
         ('s', 'Small'),
@@ -69,16 +72,9 @@ class Size(models.Model):
         ('xxl', 'Extra Extra Large'),
     )
 
-    name = models.CharField(max_length=3, choices=SIZE_CHOICES, unique=True)
-
-    def __str__(self):
-        return self.name
-
-
-class Stock(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     color = models.ForeignKey(Color, on_delete=models.CASCADE)
-    size = models.ForeignKey(Size, on_delete=models.CASCADE)
+    size = models.CharField(max_length=3, choices=SIZE_CHOICES)
     quantity = models.PositiveIntegerField(default=0)
 
     def __str__(self):

@@ -24,30 +24,34 @@
     <div class="product-details">
         <h1>{{product.name}}</h1>
         <span>{{product.price}} DZD</span>
+        {% if product.quantity == 0 %}
+            <div>
+                <img class="img-outofstock" width="35px" src="{% static 'icons/outofstock-icon.png' %}" alt="Repture de stock" title="Repture de stock">
+            </div>
+        {% endif %}
 
         <p>{{product.description}}</p>
 
         <div>
+            <h3>Categorie</h3>
+            <span>{{ product.category.name }}</span>
+        </div>
+
+        <div>
             <h3>couleur</h3>
             <ul class="list-couleur">
-                <li class="active"><div></div></li>
-                <li><div></div></li>
-                <li><div></div></li>
-
+                {% for color, sizes in color_and_sizes.items %}
+                    <li class="color-option" data-sizes="{{ sizes }}">
+                        <div style="background-color: {{ color }}"></div>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
-        <div>
-            <h3>type</h3>
-            <span>Halal</span>
-        </div>
+
         <div>
             <h3>taille</h3>
-            <ul class="list-taille">
-                <li class="active">S</li>
-                <li>M</li>
-                <li>L</li>
-                <li>XL</li>
-                <li>XXL</li>
+            <ul id="list-taille" class="list-taille">
+
             </ul>
         </div>
         <div>
@@ -61,5 +65,6 @@
         </div>
     </div>
 </section>
+
 
 {% endblock %}

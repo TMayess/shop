@@ -176,8 +176,9 @@ input{
   margin-top: 10px;
 }
 .container-product{
+    position: relative;
   width: calc(100% - 400px);
-  height: 2000px;
+  height: 1550px;
   display: inline-block;
 }
 .box-product{
@@ -278,5 +279,8 @@ input[type="range"]::-moz-range-thumb {
 
 
 
-
-
+.pagination{
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+}

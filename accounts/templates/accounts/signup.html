@@ -5,15 +5,14 @@
   <div class="main-container">
     <!-- <h1>S'inscrire</h1> -->
 
-    <!-- <img src="Logo-removebg-preview.png" width="200px" alt=""> -->
     <div class="sub-container">
 
       <div class="container">
 
         <form class="sign-form"  action="" method="POST" >
           {% csrf_token %}
-          <h2>Informations personnelles</h2>
-          <p>Prière de fournir les détails suivants pour compléter votre inscription :</p>
+          <h2>{{ title }}</h2>
+          <p>{{ subtitle }}</p>
           {{ form.as_p }}
 
           <div class="gap"></div>
@@ -23,32 +22,7 @@
 
         </form>
 
-        <!--<form class="sign-form" >
 
-          <h2>Adresse</h2>
-
-          {{ stepTwoForm.as_p}}
-
-          <div class="btn-form">
-            <button type="button" onclick="scrollRight()">Suivant</button>
-            <button type="button" onclick="scrollLeftPerso()">Précédent</button>
-          </div>
-        </form>
-
-        <form class="sign-form" >
-
-          <h2>Sécurité</h2>
-          <p>Veuillez remplir le formulaire pour finaliser votre inscription :</p>
-
-          {{ stepThreeForm.as_p}}
-
-
-          <div class="btn-form">
-            <button type="submit">Valider</button>
-            <button type="button" onclick="scrollLeftPerso()">Précédent</button>
-          </div>
-
-        </form>-->
       </div>
     </div>
   </div>

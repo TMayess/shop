@@ -315,11 +315,11 @@ ul{
     transition: background-color 0.2s;
     cursor: pointer;
 }
-.pagination{
+.pagination-slide{
     display: flex;
     justify-content: center;
 }
-.pagination{
+.pagination-slide{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -372,12 +372,23 @@ ul{
     transition: background-color 0.5s;
     z-index: 2;
 }
+.div-product .img-outofstock{
+    position: absolute;
+    right: 50px;
+    top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fb5043;
+    transition: background-color 0.5s;
+    z-index: 2;
+}
 .div-product .img-addFavoris:hover{
     background-color: #cbcbcb;
 }
 
 .div-product {
     position: relative;
+    overflow: hidden;
 }
 
 .product-info {

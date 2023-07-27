@@ -8,22 +8,17 @@
 
     <div class="sub-container">
 
+        {{ error }}
+
         <h1>Se connecter</h1>
         <form class="sign-form" action="" method="POST">
         {% csrf_token %}
             <div class="field">
                 <input type="email" placeholder="Email" name="email" id="email" required>
-                <span class="error">
-                    <img class="error-icon" src="error-icon-red.png" alt="">
-                    <p class="error-text"> bla blaffffffffffffff ffff bla</p>
-                </span>
             </div>
             <div class="field">
                 <input type="password" name="password" placeholder="Mot de passe" id="password" required>
-                <span class="error">
-                    <img class="error-icon" src="error-icon-red.png" alt="">
-                    <p class="error-text"> bla blaffffffffffffff ffff bla</p>
-                </span>
+
             </div>
 
 
@@ -46,5 +41,8 @@
     </div>
 
 </div>
-
+<!--<span class="error">
+                    <img class="error-icon" src="error-icon-red.png" alt="">
+                    <p class="error-text"> bla blaffffffffffffff ffff bla</p>
+                </span>-->
 {% endblock %}

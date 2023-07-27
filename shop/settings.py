@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+AUTHENTICATION_BACKENDS = ['accounts.backends.EmailBackend']
 
 ROOT_URLCONF = 'shop.urls'
 
@@ -131,3 +132,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST =  'smtp.gmail.com'
+EMAIL_HOST_USER =  'mayess.tairi24@gmail.com'
+EMAIL_HOST_PASSWORD =  'mayess2471999'
+EMAIL_PORT =  587

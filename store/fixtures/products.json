@@ -1,0 +1,210 @@
+[
+  {
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 11,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 12,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  }
+,
+  {
+    "model": "store.product",
+    "pk": 13,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  },{
+    "model": "store.product",
+    "pk": 14,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }},
+  {
+    "model": "store.product",
+    "pk": 15,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 16,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 17,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  }
+,
+  {
+    "model": "store.product",
+    "pk": 19,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  },{
+    "model": "store.product",
+    "pk": 20,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }},
+  {
+    "model": "store.product",
+    "pk": 21,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 22,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 23,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  }
+,
+  {
+    "model": "store.product",
+    "pk": 24,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }
+  },{
+    "model": "store.product",
+    "pk": 25,
+    "fields": {
+      "name": "Product 1",
+      "slug": "product-1",
+      "price": 19.99,
+      "description": "This is product 1 description.",
+      "thumbnail": "path/to/thumbnail1.jpg",
+      "material": "Material 1",
+      "category": "T-shirts et chemises",
+      "quantity": 0
+    }}
+
+]
